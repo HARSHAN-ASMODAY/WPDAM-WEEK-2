@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPDAM Week 2</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content">
+            <h1 id="main-title">About Me</h1>
+            <p id="typing-text"></p>
+            <section>
+                <h2>Education</h2>
+                <p>Bachelor's in Computer Science, Rathinam College of Arts And Science</p>
+            </section>
+            <section>
+                <h2>Interests</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Ethical Hacking</li>
+                    <li>Web Design</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP Animations -->
+    <script>
+        // Fade-in Animation for the title and content
+        gsap.from("#main-title", { opacity: 0, duration: 1, y: -50 });
+        gsap.from(".content", { opacity: 0, duration: 1, delay: 0.5, y: 50 });
+
+        // Typewriter Effect for the typing text
+        const typingText = document.getElementById("typing-text");
+        const text = "Hello! I'm Harshan B, a passionate developer and lifelong learner!";
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        typeWriter();
+    </script>
+        <script>
+            const body = document.querySelector('body');
+    
+            // Variables to control the strength of the background movement
+            const movementStrength = 50; // Higher values move the background more
+            const widthStrength = window.innerWidth / movementStrength;
+            const heightStrength = window.innerHeight / movementStrength;
+    
+            // Event listener to detect mouse movement
+            body.addEventListener('mousemove', function(event) {
+                // Calculate the mouse position as a percentage of the viewport
+                const x = (event.clientX - window.innerWidth / 2) / widthStrength;
+                const y = (event.clientY - window.innerHeight / 2) / heightStrength;
+    
+                // Update background position dynamically with a subtle shift
+                body.style.backgroundPosition = `${50 + x}% ${50 + y}%`;
+            });
+        </script>    
+</body>
+</html>

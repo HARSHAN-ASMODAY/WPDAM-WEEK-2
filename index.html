@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPDAM Week 2</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="container text-center">
+                <h1>Welcome to My Portfolio</h1>
+                <p>A Normal BMW guy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project -->
+    <!-- <section class="featured-project">
+        <h2>Featured Project</h2>
+        <p>Amazing project description with an image and a link.</p>
+        <img src="project-image.jpg" alt="Project Image">
+        <a href="projects.html">View Projects</a>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    
+            // Hero Section - Zoom In with Rotation
+            gsap.from(".hero h1", { duration: 1.2, opacity: 0, scale: 0.5, rotate: -10, ease: "elastic.out(1, 0.5)", delay: 0.3 });
+            gsap.from(".hero p", { duration: 1.2, opacity: 0, y: 20, ease: "power2.out", delay: 0.5 });
+    
+            // Featured Project - Flip Effect on Scroll
+        //     gsap.from(".featured-project", {
+        //     scrollTrigger: {
+        //         trigger: ".featured-project",
+        //         start: "top 85%",
+        //         toggleActions: "play none none none"
+        //     },
+        //     duration: 1.2,
+        //     opacity: 0,
+        //     y: 50,
+        //     skewX: 10,
+        //     scale: 0.9,
+        //     ease: "expo.out"
+        // });
+        });
+    </script>
+    
+    <!-- Bootstrap JS (for responsiveness) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
