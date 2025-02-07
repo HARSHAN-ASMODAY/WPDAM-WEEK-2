@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPDAM Week 2</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Exploring the Beauty of Nature</h2>
+            <img src="images/luka-tsikolia-ZLyzbhrfjMY-unsplash.jpg" alt="Beautiful nature scenery">
+            <br>
+            <br>
+            <p>The BMW M5 is a high-performance sports sedan that combines luxury, power, and cutting-edge technology. As part of BMW's M series, it delivers an exhilarating driving experience with a perfect balance of speed and comfort.</p>
+            <ol>
+                <li>Powered by a twin-turbocharged V8 engine, producing incredible horsepower and torque.</li>
+                <li>Features BMW’s xDrive all-wheel-drive system for superior handling and control.</li>
+                <li>Luxurious interior with premium materials and advanced driver-assistance technology.</li>
+                <li>Iconic M Performance design with aggressive styling and aerodynamic enhancements.</li>
+                <li>Offers a thrilling yet refined driving experience, making it a top choice for enthusiasts.</li>
+            </ol>
+            
+        </article>
+        
+        <article>
+            <h2>Top 5 Benefits of Daily Exercise</h2>
+            <img src="images/gabriel-heinzer-4Mw7nkQDByk-unsplash.jpg" alt="Person jogging in the morning">
+            <br>
+            <br>
+            <p>Ethical hacking plays a crucial role in cybersecurity by identifying vulnerabilities before malicious hackers can exploit them. Ethical hackers use their skills to strengthen security systems and protect sensitive data.</p>
+            <ol>
+                <li>Identifies and fixes security vulnerabilities in networks and systems.</li>
+                <li>Helps organizations prevent cyber attacks and data breaches.</li>
+                <li>Enhances knowledge of cybersecurity and penetration testing techniques.</li>
+                <li>Protects user privacy and sensitive information from threats.</li>
+                <li>Contributes to a safer digital environment for businesses and individuals.</li>
+            </ol>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Check local storage for dark mode preference
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+    }
+
+    darkModeToggle.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        // Save preference to local storage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
