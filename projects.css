@@ -1,13 +1,15 @@
+/* Base styles remain the same */
+
 body {
-    background-color: #000;  /* Solid black background for a bold, luxurious look */
-    color: #f1f1f1;  /* Light gray text for readability against the black background */
+    background-color: #000;
+    color: #f1f1f1;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    border-bottom: 3px solid #ffd700;  /* Gold accent to match the luxury theme */
+    border-bottom: 3px solid #ffd700;
 }
 
 .navbar {
@@ -43,14 +45,20 @@ main {
 }
 
 h1 {
-    font-size: 4em;  /* Larger font for a more striking impact */
+    font-size: 4em;
     font-weight: 700;
     margin-bottom: 50px;
-    color: #ffd700;  /* Gold text for the header */
+    color: #ffd700;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
 }
 
 .project-card {
-    background-color: #111;  /* Very dark gray to keep it sleek but softer than pure black */
+    background-color: #111;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -68,7 +76,7 @@ h1 {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-bottom: 3px solid #ffd700;  /* Gold border for a luxurious touch */
+    border-bottom: 3px solid #ffd700;
 }
 
 .project-card .card-body {
@@ -78,18 +86,18 @@ h1 {
 .project-card h2 {
     font-size: 2.2em;
     margin-bottom: 15px;
-    color: #ffd700;  /* Gold color for project titles */
+    color: #ffd700;
 }
 
 .project-card p {
-    color: #ccc;  /* Soft gray text to maintain contrast and readability */
+    color: #ccc;
     font-size: 1.1em;
     line-height: 1.6;
 }
 
 .project-card .btn {
-    background-color: #ffd700;  /* Gold button for premium feel */
-    color: #000;  /* Black text on the button for contrast */
+    background-color: #ffd700;
+    color: #000;
     border: none;
     padding: 12px 25px;
     font-weight: 600;
@@ -101,25 +109,19 @@ h1 {
 }
 
 .project-card .btn:hover {
-    background-color: #e0a800;  /* Darker gold on hover */
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 50px;
+    background-color: #e0a800;
 }
 
 footer {
     text-align: center;
-    background-color: #000;  /* Black footer to maintain consistency */
+    background-color: #000;
     color: #f1f1f1;
     padding: 25px;
     margin-top: 50px;
-    border-top: 3px solid #ffd700;  /* Gold accent line at the top of the footer */
+    border-top: 3px solid #ffd700;
 }
 
-/* Add subtle animations for a more refined effect */
+/* Add subtle animations */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -133,4 +135,70 @@ footer {
 
 h1, .project-card, .btn {
     animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive Design */
+
+/* For small devices (up to 768px) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1em;
+        margin: 0 8px;
+    }
+    
+    h1 {
+        font-size: 3em;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 30px;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+}
+
+/* For extra small devices (up to 480px) */
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    .project-card h2 {
+        font-size: 1.8em;
+    }
+
+    .project-card p {
+        font-size: 1em;
+    }
+
+    .project-card .btn {
+        padding: 10px 20px;
+    }
 }

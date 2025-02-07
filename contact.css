@@ -1,3 +1,5 @@
+/* Base Styles */
+
 body {
     background-color: #000;  /* Solid black background for a bold, luxurious look */
     color: #f1f1f1;  /* Light gray text for readability against the black background */
@@ -20,7 +22,7 @@ header {
 .navbar-brand {
     font-weight: bold;
     font-size: 2em;
-    color: #ffd700   !important;
+    color: #ffd700 !important;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -44,18 +46,21 @@ main {
 }
 
 h1 {
-    font-size: 4em;  /* Larger font for a more striking impact */
+    font-size: 4em;
     font-weight: 700;
     margin-bottom: 50px;
-    color: #ffd700;  /* Gold text for the header */
+    color: #ffd700;
 }
 
+/* Contact Form Section */
 .contact-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 form {
@@ -64,15 +69,15 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: #111;  /* Very dark gray to keep it sleek but softer than pure black */
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #111;
+    padding: 25px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 label {
     font-size: 1.2em;
-    color: #ffd700;  /* Gold text for labels */
+    color: #ffd700;
     text-align: left;
 }
 
@@ -81,19 +86,19 @@ input, textarea {
     color: #f1f1f1;
     border: 2px solid #333;
     border-radius: 5px;
-    padding: 10px;
+    padding: 12px;
     font-size: 1em;
     width: 100%;
 }
 
 input:focus, textarea:focus {
-    border-color: #ffd700;  /* Gold border on focus */
+    border-color: #ffd700;
     outline: none;
 }
 
 button {
-    background-color: #ffd700;  /* Gold button for premium feel */
-    color: #000;  /* Black text on the button for contrast */
+    background-color: #ffd700;
+    color: #000;
     border: none;
     padding: 15px;
     font-weight: 600;
@@ -105,18 +110,19 @@ button {
 }
 
 button:hover {
-    background-color: #e0a800;  /* Darker gold on hover */
+    background-color: #e0a800;
 }
 
+/* Map */
 .map-container {
     max-width: 600px;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
-/* Add subtle animations for a more refined effect */
+/* Animations */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -130,4 +136,91 @@ button:hover {
 
 h1, form, .map-container {
     animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive Design */
+
+/* Tablets and small desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    form {
+        max-width: 90%;
+    }
+
+    .map-container {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1em;
+        margin: 0 8px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    main {
+        padding: 50px 15px;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .map-container {
+        max-width: 100%;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    main {
+        padding: 40px 10px;
+    }
+
+    .contact-container {
+        gap: 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .map-container {
+        border-radius: 8px;
+    }
 }
